@@ -32,7 +32,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # ── 2. Train model ──────────────────────────────────────────────────────────
-clf = RandomForestClassifier(n_estimators=100, random_state=42)
+clf = RandomForestClassifier(n_estimators=1, max_depth=1, random_state=42)
 clf.fit(X_train, y_train)
 
 # ── 3. Evaluate ─────────────────────────────────────────────────────────────

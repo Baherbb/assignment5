@@ -8,7 +8,6 @@ model_info.txt so the deploy job can retrieve it.
 
 import os
 import mlflow
-import mlflow.sklearn
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -50,7 +49,6 @@ with mlflow.start_run() as run:
     mlflow.log_param("n_estimators", 100)
     mlflow.log_param("random_state", 42)
     mlflow.log_metric("accuracy", accuracy)
-    mlflow.sklearn.log_model(clf, "model")
 
     run_id = run.info.run_id
     print(f"MLflow Run ID: {run_id}")

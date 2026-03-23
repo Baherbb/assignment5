@@ -17,7 +17,7 @@ import mlflow
 
 # ── Configuration ───────────────────────────────────────────────────────────
 MODEL_INFO_FILE = "model_info.txt"
-ACCURACY_THRESHOLD = 0.85
+ACCURACY_THRESHOLD = 0.99
 METRIC_NAME = "accuracy"
 
 # ── 1. Read Run ID from the artifact passed by the validate job ─────────────
